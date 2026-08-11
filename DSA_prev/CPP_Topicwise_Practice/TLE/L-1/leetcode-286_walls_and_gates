@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+
+    void wallsAndGates(vector<vector<int>> &rooms) {
+        // write your code here
+        int rows = mat.size();
+        int cols = mat[0].size();
+
+        vector<pair<int,int>> dir ={ {-1,0},{1,0},{0,1},{-1,0}};
+        vector<vector<int>> dist(rows.vector<int> (cols,INT_MAX));
+        queue<pair<int,int>> q;
+
+        for(int r=0;r<rows;r++){
+            for(int j=0;j<cols;j++){
+                if(mat[r][j]==0) {
+                    dist[r][j] =0;
+                    q.push({r,j});
+                }else if(mat[r][j]==-1) {
+                    dist[r][j]=-1;
+                }
+            }
+        }
+        while(!q.empty()){
+            auto[r,c] = q.front();
+            q.pop();
+
+            for(auto[dr,dc]:dir) {
+                int nr=r+dr;
+                int nc=c+dc;
+                if(nr<0 || nc<0 || nr>=rows || nc>=cols) continue;
+                if(dist[nr][nc]==-1) continue;
+                if(dist[nr][nc] > dist[r][c]+1){
+                    dist[nr][nc] = dist[r][c]+1;
+                    q.push({nr,nc});
+                }
+            }
+        }
+
+    }   
+};

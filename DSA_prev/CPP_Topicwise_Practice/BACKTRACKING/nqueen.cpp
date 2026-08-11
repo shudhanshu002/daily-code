@@ -1,0 +1,55 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int board[11][11];
+
+bool isSafe(int n, int row,int col) {
+    // same column check
+    for(int i=row-1; i>=0 ;i--) {
+        if(board[i][col] == 1) return false;
+    }
+
+    // forward diagonal check
+    for(int i=row-1, j = col+1; i>=0 && j<n; i--,j++) {
+        if(board[i][j] == 1) return false;
+    }
+
+    // backward diagonal check
+    for(int i=row-1,j=col-1; i>=0 && j>=0; i--, j--) {
+        if(board[i][j] == 1) return false;
+    }
+
+    return true;
+}
+
+void nqueenHelper(int n, int row) {
+    if(row == n) {
+        // Print the matrix
+		for(int i=0;i<n;i++) {
+			for(int j=0;j<n;j++) {
+				cout<<board[i][j]<<" ";
+			}
+		}
+		cout<<endl;
+    }
+
+    for(int j=0;j<n;j++) {
+        if(isSafe(n,row,j)) {
+            board[row][j] = 1;
+            nqueenHelper(n, row+1);
+            board[row][j] = 0;
+        }
+    }
+}
+
+void placeQueen(int n) {
+    memset(board, 0, sizeof board);
+    nqueenHelper(n,0);
+}
+
+int main(int argc, char const *argv[]) {
+    placeQueen(4);
+    return 0;
+}
