@@ -1,0 +1,26 @@
+#include <stdio.h>
+#define MAX_SIZE 100
+int main(){
+    int arr[MAX_SIZE];
+    int size;
+    int i,j,temp;
+     printf("enter size of array: ");
+    scanf("%d ",&size);
+    printf("Enter elements in array: ");
+    for(int i=0;i<size;i++){
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<size;i++){
+        for(int j=i+1;j<size;j++){
+            if(arr[i]>arr[j]){
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    printf("Printing array elelments");
+    for(int i=0;i<size;i++){
+        printf("%d ",arr[i]);
+    }
+}
