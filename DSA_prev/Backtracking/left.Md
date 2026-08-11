@@ -1,0 +1,16 @@
+```txt
+Maximum Number of Achievable Transfer Requests (Leetcode-1601)
+Combinations (Leetcode-77)
+Find the Minimum Cost Array Permutation (Leetcode-3149)
+Path with Maximum Gold (Leetcode-1219)
+The Number of Beautiful Subsets (Leetcode-2597)
+Maximum Score Words Formed by Letters (Leetcode-1255)
+Word Break II (Leetcode-140)
+Split a String Into the Max Number of Unique Substrings (Leetcode - 1593)
+Construct the Lexicographically Largest Valid Sequence (Leetcode - 1718)
+Letter Tile Possibilities (Leetcode - 1079)
+The k-th Lexicographical String of All Happy Strings of Length n (Leetcode - 1415)
+Longest Subsequence Repeated k Times (Leetcode - 2014)
+24 Game (Leetcode - 679)
+Pyramid Transition Matrix (Leetcode - 756)
+```
