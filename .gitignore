@@ -1,1 +1,78 @@
+# OS generated files
+Desktop.ini
+[Hh]eartbeat
+[Tt]humbs.db
+[Tt]humbs.db:*
+[Ee]xplorer.exe.gui
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+ehthumbs_vista.db
+
+# Executables & Compiled Binaries (C/C++)
+*.exe
+*.out
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.pdb
+*.ilk
+*.idb
+
+# C/C++ Build Directories
+build/
+bin/
+obj/
+out/
+cmake-build-*/
+.cache/
+
+# IDE & Editor files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+*.suo
+*.user
+*.userossc
+*.sln.docstates
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+
+# Node / JS
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Large media & archive files
+*.nix
+*.7z
+*.zip
+*.tar.gz
+*.iso
+*.mp4
+*.mkv
+
+# Workspace Custom Ignores
 /z_to_be_covered
